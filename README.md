@@ -5,4 +5,12 @@ This a simple python tool to detect time based sqli (POST based only). This tool
 ~ cd postBL \
 ~ python3 postblis.py raw_request.txt payloads.txt http \
 \
+![alt text](https://github.com/dotslashed/postBL/raw/main/postblisi.PNG)
 \
+\
+\
+\
+\
+\
+\
+Note: This tool is for educational and bug-bounty purposes only. The scripter is strictly not responsible for any miss usages of the tool. Thanks
