@@ -8,6 +8,7 @@ Lab link: https://github.com/skyblueee/sqli-labs-php7
 \
 ![alt text](https://github.com/dotslashed/postBL/raw/main/postblisi.PNG)
 \
+![alt text](https://github.com/dotslashed/postBL/raw/main/snip1.PNG)
 \
 \
 \
