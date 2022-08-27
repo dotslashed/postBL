@@ -51,7 +51,7 @@ try:
 						m2 = lol.split('=')[1]
 						dict_x[m1] = m2
 					
-					resp = requests.post(parent_url, headers = dict_head, data = dict_x, verify = False, allow_redirects = True)
+					resp = requests.post(parent_url, headers = dict_head, data = dict_x, verify = False, allow_redirects = False)
 
 					if resp.elapsed.seconds >= 10:
 						print(Fore.GREEN + '[Vulnerable]' + Fore.WHITE + ' ' +  Fore.BLUE + 'Detection Params: ' + str(dict_x) + Fore.WHITE + '')
