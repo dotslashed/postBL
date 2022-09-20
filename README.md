@@ -6,6 +6,8 @@ Lab links: https://github.com/skyblueee/sqli-labs-php7 , http://testphp.vulnweb.
 ~ cd postBL \
 ~ python3 postblis.py raw_request.txt payloads.txt http \
 \
+![alt text](https://github.com/dotslashed/postBL/raw/main/sni-2.PNG)
+\
 ![alt text](https://github.com/dotslashed/postBL/raw/main/postblisi.PNG)
 \
 ![alt text](https://github.com/dotslashed/postBL/raw/main/snip1.PNG)
