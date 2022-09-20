@@ -30,10 +30,12 @@ try:
 				b1 = chaka.split(':')[0].strip()
 				b2 = chaka.split(':')[1].strip()
 				dict_head[b1] = b2
+				dict_head["Content-Type"] = "application/x-www-form-urlencoded"
 		# print(dict_head)
 		the_path = x1[5:].replace(' HTTP/1.1', '')
 		parent_url = protocol + '://' + x_dom + the_path
 		dict_x = dict()
+		# proxies = {'http': 'http://127.0.0.1:8080', 'https': 'https://127.0.0.1:8080'}
 		with open(payloads_file, 'r') as f:
 			for lines in f.readlines():
 				if 'BHOOT' not in x2:
@@ -42,16 +44,17 @@ try:
 				else:
 
 					part1, part2 = x2.split('BHOOT')
-					final = part1 + lines.strip() + part2
+					final = part1 + lines.strip().replace('=', '%3D') + part2
 					# print(final)
 					x3 = final.split('&')
 				
 					for lol in x3:
 						m1 = lol.split('=')[0]
 						m2 = lol.split('=')[1]
-						dict_x[m1] = m2
+						dict_x[m1] = m2.replace('%3D', '=')
 					
 					resp = requests.post(parent_url, headers = dict_head, data = dict_x, verify = False, allow_redirects = False)
+					
 
 					if resp.elapsed.seconds >= 10:
 						print(Fore.GREEN + '[Vulnerable]' + Fore.WHITE + ' ' +  Fore.BLUE + 'Detection Params: ' + str(dict_x) + Fore.WHITE + '')
